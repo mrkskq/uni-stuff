@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <asp:Label ID="lblProfesor" runat="server" Text="Проф.">Проф. </asp:Label>
+                <asp:Label ID="lblProfesor" runat="server" Text="Проф. "></asp:Label>
                 <div>
                     <asp:ListBox ID="lbPredmeti" runat="server" AutoPostBack="True" OnSelectedIndexChanged="lbPredmeti_SelectedIndexChanged">
                         <asp:ListItem Value="Гоце Арменски">Интернет технологии</asp:ListItem>
