@@ -19,10 +19,23 @@ namespace Lab1A
             Response.Redirect("UspeshnoGlasanje.aspx");
         }
 
+	
+ 	//listite da se megjusebno linkuvani 
+ 	//t.e. aku stegnam na prviot item od prvata lista, avtomatski da se selektirat prviot item od vtorata lista, i obratno
+ 
         protected void lbPredmeti_SelectedIndexChanged(object sender, EventArgs e)
         {
             //AutoPostBack da e staveno na true kaj listata so predmeti
-            lblProfesor.Text = "Проф. ";
+            lbKrediti.SelectedIndex = lbPredmeti.SelectedIndex;
+	    lblProfesor.Text = "Проф. д-р ";
+            lblProfesor.Text += lbPredmeti.SelectedItem.Value;
+        }
+
+        protected void lbKrediti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //AutoPostBack da e staveno na true kaj listata so krediti
+            lbPredmeti.SelectedIndex = lbKrediti.SelectedIndex;
+            lblProfesor.Text = "Проф. д-р ";
             lblProfesor.Text += lbPredmeti.SelectedItem.Value;
         }
     }
