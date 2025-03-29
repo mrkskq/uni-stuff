@@ -1,4 +1,83 @@
-# То шо е побитно за grep, sed, awk на едно место 😙
+# Побитни команди и по нешто за grep, sed, awk на едно место 😙
+
+## `tr`
+Користи се за замена или бришење на карактери.
+Пример: Претворање мали букви во големи:
+```bash
+Copy
+Edit
+echo "hello world" | tr 'a-z' 'A-Z'
+# Излез: HELLO WORLD
+```
+## `sort`
+Сортира линии во текстуален фајл или излез.
+Пример:
+```bash
+Copy
+Edit
+echo -e "banana\napple\ncherry" | sort
+# Излез:
+# apple
+# banana
+# cherry
+```
+## `uniq`
+Отстранува дупликати од сортиран текст.
+Пример:
+```bash
+Copy
+Edit
+echo -e "apple\napple\nbanana\nbanana\ncherry" | uniq
+# Излез:
+# apple
+# banana
+# cherry
+```
+Важно: uniq работи само ако редовите се последователно исти, па затоа најчесто се комбинира со sort:
+```bash
+Copy
+Edit
+sort file.txt | uniq
+```
+## `cut`
+Избира одредени колони или делови од редови.
+Пример: Извлекување на вториот збор (разделен со :):
+```bash
+Copy
+Edit
+echo "user:password:1234" | cut -d':' -f2
+# Излез: password
+```
+## `head`
+Прикажува првите неколку редови од фајл или излез.
+Пример:
+```bash
+Copy
+Edit
+head -n 5 /etc/passwd
+# Ги прикажува првите 5 редови од фајлот
+```
+## `tail`
+Прикажува последните неколку редови.
+Пример:
+```bash
+Copy
+Edit
+tail -n 5 /var/log/syslog
+# Ги прикажува последните 5 редови од лог фајлот
+```
+## `nl`
+Ги додава броевите на секој ред.
+Пример:
+```bash
+Copy
+Edit
+echo -e "apple\nbanana\ncherry" | nl
+Излез:
+     1  apple
+     2  banana
+     3  cherry
+```
 
 ## grep `grep "pattern" file.txt` - Пребарување на текст во датотеки
 grep итерира ред по ред, не збор по збор.
@@ -15,6 +94,7 @@ $ крај на ред (ends with)
 #### Опции
 
 ```bash
+-c → Броење на појавувања #(grep -c "error" file.txt)
 -i → Игнорира големи/мали букви #(grep -i "test" file.txt)
 -r → Рекурзивно пребарување низ фолдери #(grep -r "error" /var/logs/)
 -n → Прикажува број на линија #(grep -n "error" file.txt)
