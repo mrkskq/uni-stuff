@@ -4,8 +4,6 @@
 Се користи за замена или бришење на карактери.
 Пример: Претворање мали букви во големи:
 ```bash
-Copy
-Edit
 echo "hello world" | tr 'a-z' 'A-Z'
 # Излез: HELLO WORLD
 ```
@@ -13,8 +11,6 @@ echo "hello world" | tr 'a-z' 'A-Z'
 Сортира линии во текстуален фајл или излез.
 Пример:
 ```bash
-Copy
-Edit
 echo -e "banana\napple\ncherry" | sort
 # Излез:
 # apple
@@ -25,8 +21,6 @@ echo -e "banana\napple\ncherry" | sort
 Отстранува дупликати од сортиран текст.
 Пример:
 ```bash
-Copy
-Edit
 echo -e "apple\napple\nbanana\nbanana\ncherry" | uniq
 # Излез:
 # apple
@@ -35,16 +29,12 @@ echo -e "apple\napple\nbanana\nbanana\ncherry" | uniq
 ```
 Важно: uniq работи само ако редовите се последователно исти, па затоа најчесто се комбинира со sort:
 ```bash
-Copy
-Edit
 sort file.txt | uniq
 ```
 ## `cut`
 Избира одредени колони или делови од редови.
 Пример: Извлекување на вториот збор (разделен со :):
 ```bash
-Copy
-Edit
 echo "user:password:1234" | cut -d':' -f2
 # Излез: password
 ```
@@ -52,8 +42,6 @@ echo "user:password:1234" | cut -d':' -f2
 Прикажува првите неколку редови од фајл или излез.
 Пример:
 ```bash
-Copy
-Edit
 head -n 5 /etc/passwd
 # Ги прикажува првите 5 редови од фајлот
 ```
@@ -61,8 +49,6 @@ head -n 5 /etc/passwd
 Прикажува последните неколку редови.
 Пример:
 ```bash
-Copy
-Edit
 tail -n 5 /var/log/syslog
 # Ги прикажува последните 5 редови од лог фајлот
 ```
@@ -70,8 +56,6 @@ tail -n 5 /var/log/syslog
 Ги додава броевите на секој ред.
 Пример:
 ```bash
-Copy
-Edit
 echo -e "apple\nbanana\ncherry" | nl
 Излез:
      1  apple
