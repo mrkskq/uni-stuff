@@ -1,0 +1,22 @@
+1.
+~$ mkdir directory1 directory2
+~$ cd directory1
+~/directory1$ touch file123
+
+2.
+~/directory1$ man ls
+
+3.
+~/directory1$ chmod ug=rx,o= file123
+
+4.
+~/directory1$ chmod 550 file123
+
+5.
+~/directory1$ w
+
+6.
+~/directory1$ mv file123 ../directory2/file234
+
+7.
+~$ rm -rf directory1
