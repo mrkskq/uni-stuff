@@ -15,16 +15,16 @@ $ крај на ред (ends with)
 #### Опции
 
 ```bash
--i → Игнорира големи/мали букви (grep -i "test" file.txt)
--r → Рекурзивно пребарување низ фолдери (grep -r "error" /var/logs/)
--n → Прикажува број на линија (grep -n "error" file.txt)
--v → Инверзно пребарување (ги дава редовите кои го немаат "pattern")
--o → Ги прикажува само совпаѓањата, не целиот ред (grep -o "[0-9]\+" file.txt)
+-i → Игнорира големи/мали букви #(grep -i "test" file.txt)
+-r → Рекурзивно пребарување низ фолдери #(grep -r "error" /var/logs/)
+-n → Прикажува број на линија #(grep -n "error" file.txt)
+-v → Инверзно пребарување #(ги дава редовите кои го немаат "pattern")
+-o → Ги прикажува само совпаѓањата, не целиот ред #(grep -o "[0-9]\+" file.txt)
 -w → Пребарува цели зборови	grep -w "error" log.txt
--E → Користи регуларни изрази (исто како egrep) (grep -E "error|failed" file.txt)
--A N → Прикажува N редови после совпаѓањето	grep -A2 "error" log.txt
--B N → Прикажува N редови пред совпаѓањето	grep -B3 "error" log.txt
--C N → Прикажува N редови пред и после	grep -C2 "error" log.txt
+-E → Користи регуларни изрази (исто како egrep) #(grep -E "error|failed" file.txt)
+-A N → Прикажува N редови после совпаѓањето	#grep -A2 "error" log.txt
+-B N → Прикажува N редови пред совпаѓањето	#grep -B3 "error" log.txt
+-C N → Прикажува N редови пред и после	#grep -C2 "error" log.txt
 ```
 
 #### Примери
