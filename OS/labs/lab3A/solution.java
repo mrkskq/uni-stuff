@@ -11,21 +11,19 @@ public class DotProduct {
     // DEFINE OTHER GLOBAL VARIABLES
 
     static final BoundedRandomGenerator random = new BoundedRandomGenerator();
-
     private static final int ARRAY_LENGTH = 10000000;
-
     private static final int NUM_THREADS = 10;
-
     private static final int CHUNK = ARRAY_LENGTH / NUM_THREADS;
 
 
     // TODO: Define sychronization elements
-
+    static Semaphore lock;
     static Semaphore semaphore;
 
     static void init() {
         // TODO: Initialize synchronization elements
-        semaphore = new Semaphore(1);
+        lock = new Semaphore(1);
+        semaphore = new Semaphore(0);
     }
 
     // DO NOT CHANGE
@@ -58,14 +56,20 @@ public class DotProduct {
             calculateThread.start();
         }
 
+        /*
         for (CalculateThread calculateThread : calculateThreads) {
             calculateThread.join();
         }
+         */
+
+        semaphore.acquire(NUM_THREADS); //aku e so join, bez ova
 
         // Replace the call to calculateDotProduct below with calculateDotProductParallel
-//        for (CalculateThread calculateThread : calculateThreads) {
-//            calculateThread.calculateDotProductParallel();
-//        }
+        /* samo ova bez join i bez start
+        for (CalculateThread calculateThread : calculateThreads) {
+            calculateThread.calculateDotProductParallel();
+        }
+         */
 
         // TODO: Update the value of the global variable dotProduct
 
@@ -114,9 +118,11 @@ public class DotProduct {
                 localSum += a[i]*b[i];
             }
 
-            semaphore.acquire();
+            lock.acquire();
             dotProduct += localSum;
-            semaphore.release();
+            lock.release();
+
+            semaphore.release(); //aku e so join, bez ova
         }
 
         @Override
