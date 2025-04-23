@@ -1,9 +1,4 @@
-import javax.xml.transform.Source;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.Semaphore;
 
 
@@ -13,23 +8,20 @@ public class DotProduct {
     // DEFINE OTHER GLOBAL VARIABLES
 
     static final BoundedRandomGenerator random = new BoundedRandomGenerator();
-
     private static final int ARRAY_LENGTH = 10000000;
-
     private static final int NUM_THREADS = 10;
-
     private static final int CHUNK = ARRAY_LENGTH / NUM_THREADS;
-
     static double MAX = 0;
 
 
     // TODO: Define sychronization elements
-
+    static Semaphore lock;
     static Semaphore semaphore;
 
     static void init() {
         // TODO: Initialize synchronization elements
-        semaphore = new Semaphore(1);
+        lock = new Semaphore(1);
+        semaphore = new Semaphore(0);
     }
 
     // DO NOT CHANGE
@@ -62,21 +54,27 @@ public class DotProduct {
             calculateThread.start();
         }
 
+        /*
         for (CalculateThread calculateThread : calculateThreads) {
             calculateThread.join();
         }
+         */
+
+        semaphore.acquire(NUM_THREADS); //aku e so join, bez ova
 
         // Replace the call to calculateDotProduct below with calculateDotProductParallel
-//        for (CalculateThread calculateThread : calculateThreads) {
-//            calculateThread.calculateDotProductParallel();
-//        }
+        /* samo ova bez join i bez start
+        for (CalculateThread calculateThread : calculateThreads) {
+            calculateThread.calculateDotProductParallel();
+        }
+         */
+
+        System.out.println("Max localSum: " + MAX);
 
         // TODO: Update the value of the global variable dotProduct
 
         // DO NOT CHANGE
 
-        System.out.println("The max local sum is: " + MAX);
-        
         System.out.println("Your calculated dot product is: " + dotProduct);
         System.out.println("The actual dot product is: " + ArrayGenerator.calculateDotProduct(a,b));
 
@@ -120,14 +118,14 @@ public class DotProduct {
                 localSum += a[i]*b[i];
             }
 
-            semaphore.acquire();
-            
+            lock.acquire();
             dotProduct += localSum;
             if (localSum > MAX){
                 MAX = localSum;
             }
-            
-            semaphore.release();
+            lock.release();
+
+            semaphore.release(); //aku e so join, bez ova
         }
 
         @Override
@@ -138,7 +136,6 @@ public class DotProduct {
                 throw new RuntimeException(e);
             }
         }
-        
     }
 
     /******************************************************
