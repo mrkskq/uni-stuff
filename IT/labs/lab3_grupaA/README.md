@@ -1,3 +1,5 @@
+Ko ke se kreirat proektot odberi MVC i tamu desno gore kaj Authentication odberi Individual Accounts (za da se izgenerirat nekoja baza na pocetok za polesno)
+
 Na pochetok Build na proektot
 
 So sekoja izmena (ili na pogolema izmena nakraj) vo Tools -> NuGet Packege Manager -> Package Manager Console 
