@@ -5,12 +5,12 @@ So sekoja izmena (ili na pogolema izmena nakraj) vo Tools -> NuGet Packege Manag
 > Enable-Migrations (samo na pocetok)
 
 > Add-Migration (i nekoe ime na migracijata (pr. Initial, blabla....)) <br>
-> Update-Database
+> Update-Database <br>
 
-Prvo napishi gi tie trite vo Models
-Posle dodaj gi trite Controllers (avtomatski so tretiot controller sve ke se izgenerirat to so Entity Framework i odberi za koj model i vo Data context class: ApplicationDbContext)
-Vo controlerot za Doctor imat izmena nakraj
+Prvo napishi gi tie trite vo Models <br>
+Posle dodaj gi trite Controllers (avtomatski so tretiot controller sve ke se izgenerirat to so Entity Framework i odberi za koj model i vo Data context class: ApplicationDbContext) <br>
+Vo controlerot za Doctor imat izmena nakraj <br>
 
-i posle vo Views imat nekoj izmeni vo nekoja linija (od to sho avtomatski ke se izgeneriret preku kontrolerite) - obelezani se so komentari <br> //----------->
+i posle vo Views imat nekoj izmeni vo nekoja linija (od to sho avtomatski ke se izgeneriret preku kontrolerite) - obelezani se so komentari <br> //-----------> <br>
 
 i uste izmena vo to Layout za preku link da mojt da se pristapit 😙
