@@ -12,13 +12,11 @@ public class Worker extends Thread {
     private Socket socket;
     private String logFilePath;
     private static int counter = 0;
-    private static Lock lock;
-    private BufferedWriter writer;
+    private static final Lock lock = new ReentrantLock();
 
     public Worker(Socket socket, String logFilePath) {
         this.socket = socket;
         this.logFilePath = logFilePath;
-        lock = new ReentrantLock();
     }
 
     public void run() {
