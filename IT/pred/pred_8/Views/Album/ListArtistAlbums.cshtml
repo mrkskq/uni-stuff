@@ -1,0 +1,18 @@
+@using MvcMusicStore.Models
+@model MvcMusicStore.ViewModels.ArtistAlbumsViewModel
+
+@{
+    ViewBag.Title = "ListArtistAlbums";
+}
+
+<h2>@Model.Artist.Name</h2>
+
+<ul>
+    @foreach (Album a in Model.Albums)
+            {
+                <li>@a.Title</li>
+            }
+</ul>
+
+@Html.DropDownListFor(a => a.ChosenAlbum,
+    new SelectList(Model.Albums, "AlbumId", "Title"), "Select Album")

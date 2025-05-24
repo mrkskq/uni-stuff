@@ -1,0 +1,39 @@
+@model IEnumerable<Lab3A.Models.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+    // -----------------------------> ovde e prvo Name pa Hospital.Name
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital.Name)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+    // --------------------------------------> ovie 3 linii so <td> se dodaeni
+        <td>@item.Name</td>
+        <td>@item.Hospital.Name</td>
+        <td>@item.Hospital.Address</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Избриши", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

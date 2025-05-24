@@ -1,0 +1,7 @@
+StudentID,Name,Math,Science,English,History
+1001,Perfect Student,100,100,100,100
+1002,Struggling Student,0,0,0,0
+1003,Inconsistent Student,50,100,0,75
+1004,Balanced Student,75,75,75,75
+1005,Name with Spaces,88,92,79,85
+1006,Special Char Student,90,85,92,79

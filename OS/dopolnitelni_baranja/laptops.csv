@@ -1,0 +1,51 @@
+id,brand,model,cpu,gpu,ram,price
+1,Alienware,Spectre x360,Intel Core i9-13900HX,Nvidia RTX 3060,64GB,1699
+2,Razer,ThinkPad X1,AMD Ryzen 9 6900HX,Nvidia RTX 4060,64GB,1299
+3,Alienware,Spectre x360,AMD Ryzen 9 6900HX,Nvidia RTX 3070,16GB,899
+4,Razer,Stealth 15M,Intel Core i5-1235U,Nvidia RTX 3080,32GB,1699
+5,MSI,m15 R7,AMD Ryzen 5 7530U,AMD Radeon RX 7900M,16GB,1799
+6,Alienware,Vivobook 16X,AMD Ryzen 9 6900HX,Nvidia RTX 4080,8GB,999
+7,Alienware,Aero 17,AMD Ryzen 5 5600H,Nvidia RTX 3060,8GB,1299
+8,HP,ZenBook Pro,AMD Ryzen 9 6900HX,Nvidia RTX 3060,8GB,1999
+9,Apple,IdeaPad Gaming 3,Intel Core i3-1215U,Nvidia RTX 4060,8GB,1599
+10,MSI,ZenBook Pro,Intel Core i9-13900HX,AMD Radeon RX 6600M,64GB,1799
+11,HP,Stealth 15M,AMD Ryzen 5 7530U,Nvidia RTX 3060,64GB,1099
+12,HP,XPS 13,Intel Core i7-12700H,Nvidia RTX 3080,16GB,2399
+13,MSI,IdeaPad Gaming 3,Intel Core i7-12700H,AMD Radeon RX 6800M,32GB,1799
+14,MSI,Aero 17,Intel Core i5-1235U,AMD Radeon RX 6600M,8GB,1199
+15,MSI,Blade 15,AMD Ryzen 5 5600H,Nvidia RTX 3070,64GB,1799
+16,MSI,ZenBook Pro,AMD Ryzen 7 5800H,AMD Radeon RX 6600M,32GB,1999
+17,Alienware,Blade 15,AMD Ryzen 9 6900HX,Nvidia RTX 3050,32GB,1099
+18,HP,ROG Zephyrus,Intel Core i5-1235U,Nvidia RTX 4080,64GB,899
+19,Acer,XPS 13,Intel Core i5-1335U,AMD Radeon RX 7900M,32GB,2399
+20,Gigabyte,Spectre x360,Intel Core i5-1335U,Nvidia RTX 4050,16GB,2399
+21,Acer,Stealth 15M,AMD Ryzen 7 5800H,Nvidia RTX 4060,16GB,1399
+22,Gigabyte,XPS 13,AMD Ryzen 5 7530U,Nvidia RTX 3050,16GB,1699
+23,Razer,Spectre x360,AMD Ryzen 7 5800H,AMD Radeon RX 7900M,8GB,1999
+24,Gigabyte,ZenBook Pro,Intel Core i5-1335U,Nvidia RTX 4060,32GB,2599
+25,Apple,Omen 17,Intel Core i7-12700H,Nvidia RTX 3070,8GB,2599
+26,Dell,Stealth 15M,AMD Ryzen 7 5800H,AMD Radeon RX 6800M,16GB,1299
+27,Asus,ROG Zephyrus,Intel Core i7-12700H,Nvidia RTX 3060,64GB,1599
+28,Apple,ZenBook Pro,Intel Core i9-13900HX,AMD Radeon RX 6800M,32GB,1599
+29,Alienware,Legion 7,AMD Ryzen 7 5800H,Integrated,32GB,1599
+30,Razer,ThinkPad X1,AMD Ryzen 5 5600H,AMD Radeon RX 6800M,8GB,2199
+31,Lenovo,Omen 17,Intel Core i5-1235U,Nvidia RTX 4050,64GB,999
+32,Dell,Stealth 15M,Intel Core i5-1335U,Integrated,16GB,2399
+33,MSI,ZenBook Pro,Intel Core i7-12700H,Nvidia RTX 4070,32GB,2799
+34,Asus,m15 R7,AMD Ryzen 5 7530U,Nvidia RTX 3060,16GB,2599
+35,Razer,Spectre x360,AMD Ryzen 7 5800H,AMD Radeon RX 6800M,8GB,2799
+36,HP,Omen 17,AMD Ryzen 9 6900HX,Nvidia RTX 3080,16GB,1999
+37,Dell,m15 R7,AMD Ryzen 9 6900HX,Nvidia RTX 3070,8GB,2799
+38,Acer,IdeaPad Gaming 3,Intel Core i5-1235U,Nvidia RTX 3080,8GB,999
+39,HP,m15 R7,AMD Ryzen 5 7530U,AMD Radeon RX 6800M,32GB,899
+40,Apple,MacBook Air,Intel Core i5-1335U,Nvidia RTX 4050,32GB,899
+41,MSI,IdeaPad Gaming 3,Intel Core i5-1235U,Nvidia RTX 4050,32GB,1799
+42,Apple,Omen 17,Intel Core i5-1235U,Nvidia RTX 4080,8GB,1499
+43,Dell,Blade 15,Intel Core i5-1235U,Nvidia RTX 3050,32GB,899
+44,HP,Vivobook 16X,AMD Ryzen 9 6900HX,Nvidia RTX 3070,32GB,2199
+45,HP,XPS 13,Intel Core i3-1215U,Integrated,16GB,1799
+46,Acer,ZenBook Pro,AMD Ryzen 5 5600H,Integrated,64GB,1699
+47,Asus,Omen 17,Intel Core i3-1215U,Nvidia RTX 4070,32GB,1699
+48,HP,IdeaPad Gaming 3,AMD Ryzen 5 7530U,Nvidia RTX 4050,32GB,1099
+49,Lenovo,XPS 13,Intel Core i5-1235U,Nvidia RTX 3060,16GB,1599
+50,Acer,XPS 13,Intel Core i3-1215U,Nvidia RTX 4060,32GB,2599
