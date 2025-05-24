@@ -1,0 +1,53 @@
+@model VaccinationApp.Models.VaccinationCenter
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@Html.ActionLink("Додади вакциниран пациент", "AddPatient", new { id = Model.Id }) 
+
+<div>
+    <h4>VaccinationCenter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxCapacity)
+        </dd>
+
+        <dt>
+            Вакцинирани пациенти:
+        </dt>
+
+        @foreach (var vaccine in Model.Vaccines)
+            {
+                <dd>@vaccine.Patient.FirstName</dd>
+            }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
