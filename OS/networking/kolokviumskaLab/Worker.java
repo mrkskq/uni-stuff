@@ -45,17 +45,14 @@ public class Worker extends Thread {
                 socket.close();
             }
 
-            while (!(line = reader.readLine()).equalsIgnoreCase(index + ":over")) {
-                lock.lock();
-                int lineSize = line.getBytes().length;
-                fileSize += (lineSize + 1); // +1 za \n zs ne go brojt inace
-                lock.unlock();
+            while (!(line = reader.readLine()).equalsIgnoreCase(index + ":over")){
+                System.out.println(line);
             }
 
             writer.write("Sodrzinata na fajlot e uspeshno primena\n");
             writer.flush();
-            writer.write(index + ":fileSize:" + fileSize + "\n");
-            writer.flush();
+
+            System.out.println(reader.readLine()); //index:fileSize:broj
 
 
         } catch (IOException e) {
