@@ -9,6 +9,7 @@ public class Client extends Thread{
     private String serverName;
     private int serverPort;
     private String filePath;
+    private int fileSize = 0;
 
     public Client(String serverName, int serverPort, String filePath) {
         this.serverName = serverName;
@@ -43,16 +44,17 @@ public class Client extends Thread{
             writer.flush();
 
             while ((line = fileReader.readLine()) != null) {
+                fileSize += (line.getBytes().length + 1); //+1 za \n dek ne go zemat
                 writer.write(line + "\n"); //prakjaj ja sodrzinata na fajlot
                 writer.flush();
             }
             writer.write(index + ":over\n"); //prati za kraj
             writer.flush();
 
+            writer.write(index + ":fileSize:" + fileSize + "\n");
+            writer.flush();
+
             System.out.println(reader.readLine()); //Sodrzinata na fajlot e uspeshno primena
-            System.out.println(reader.readLine()); //index:fileSize:broj
-
-
 
         } catch (IOException e) {
             throw new RuntimeException(e);
