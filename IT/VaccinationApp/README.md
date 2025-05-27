@@ -49,12 +49,12 @@ Bo Views -> Shared -> _Layout смени ги линкојте да бидат �
 url: "/Patients/Delete/" + button.attr("data-patient-id"),
 
 ## 6. 
-- ServerExploreр -> Отвори ја базата -> Отвори ја табелата AspNetRoles -> рачно додај ги улогите шо требет (User, Doctor) </br>
+- Solution Explorer -> Отвори ја базата -> Отвори ја табелата AspNetRoles -> рачно додај ги улогите шо требет (User, Doctor) </br>
 - Models -> ManageViewModels -> ископирај од друг проект делот за public class RoleUser  </br>
 - Controllers -> AccountController -> ископирај од друг проект делот за public ActionResult AddRoleToUser() и HttpPost за public ActionResult AddRoleToUser() </br>
 - Views -> Account -> напрај View za AddRoleToUser (ископирај од друг проект) </br>
 - За делот со авторизација: </br>
-ServerExploreр -> АppStart -> FilterConfig -> додај filters.Add(new AuthorizeAttribute()); </br>
+Solution Explorer -> АppStart -> FilterConfig -> додај filters.Add(new AuthorizeAttribute()); </br>
 
 <hr>
 
